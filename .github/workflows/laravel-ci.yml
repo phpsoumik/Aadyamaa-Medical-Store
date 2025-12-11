@@ -53,7 +53,7 @@ jobs:
       run: php artisan migrate --force
 
     - name: Install NPM Dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
 
     - name: Build Assets
       run: npm run build
