@@ -1,0 +1,56 @@
+THIS IS SOUMIK CODE - Changes for Supplier Rate Comparison Tool Feature
+
+===========================================
+FILES CHANGED/CREATED:
+===========================================
+
+1. NEW FILE CREATED:
+   - resources/js/pages/reports/SupplierRateComparison.vue
+   (New Vue component for the tool)
+
+2. MODIFIED FILES:
+   - resources/js/router.ts
+   (Added import and route for SupplierRateComparison component)
+   
+   - resources/js/pages/reports/Report.vue
+   (Added menu item with noPermission flag to bypass permission check)
+
+3. SQL FILES (Optional - for permission setup):
+   - add_permission.sql
+   - check_permission.sql
+
+===========================================
+DEPLOYMENT INSTRUCTIONS:
+===========================================
+
+Option 1: MANUAL FILE TRANSFER (Recommended for Sir)
+-----------------------------------------------------
+Copy these 2 files to live server:
+1. resources/js/pages/reports/SupplierRateComparison.vue (NEW)
+2. resources/js/router.ts (MODIFIED)
+3. resources/js/pages/reports/Report.vue (MODIFIED)
+
+Then run on live server:
+- npm run production (or npm run build)
+
+Option 2: GIT PUSH/PULL
+-----------------------------------------------------
+git add resources/js/pages/reports/SupplierRateComparison.vue
+git add resources/js/router.ts
+git add resources/js/pages/reports/Report.vue
+git commit -m "Added Supplier Rate Comparison Tool menu"
+git push
+
+Then on live server:
+git pull
+npm run production
+
+===========================================
+NOTES:
+===========================================
+- Permission check is BYPASSED using noPermission flag
+- No database changes required for now
+- Menu will show for all users
+- To enable permission check later, remove "noPermission: true" from Report.vue
+
+===========================================
